@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pickachu Flying Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+
+        <div id="start-screen">
+            <h1>Pickachu Flying Simulator</h1>
+            <p>Click or tap to fly!</p>
+            <button id="start-button">Start Game</button>
+        </div>
+
+        <div id="jet"></div>
+        <div id="score">Score: 0</div>
+        <div id="game-over" class="hidden">
+            Game Over!
+            <br>
+            Your Score: <span id="final-score">0</span>
+            <br>
+            <button id="restart-button">Restart Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
