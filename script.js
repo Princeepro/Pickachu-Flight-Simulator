@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const startScreen = document.getElementById('start-screen');
     const startButton = document.getElementById('start-button');
-    const jetFlapSound = new Audio('assets/jump.mp3'); 
-    jetFlapSound.volume = 0.6;
 
 
     let jetY = gameContainer.offsetHeight / 2 - jet.offsetHeight / 2;
@@ -193,9 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gameContainer.addEventListener('mousedown', () => {
         if (!isGameOver && startScreen.classList.contains('hidden')) { // Only fly if game is active and start screen is hidden
             jetVelocity = lift;
-            jetFlapSound.currentTime = 0; // Rewind to the start
-            jetFlapSound.play().catch(e => console.error("Error playing sound:", e)); // Play sound, catch potential errors
-        }
+            
     });
         
 
@@ -203,8 +199,8 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         if (!isGameOver && startScreen.classList.contains('hidden')) { // Only fly if game is active and start screen is hidden
             jetVelocity = lift;
-            jetFlapSound.currentTime = 0; // Rewind to the start
-            jetFlapSound.play().catch(e => console.error("Error playing sound:", e)); // Play sound, catch potential errors
+
+        
         }
     });
 
